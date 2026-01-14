@@ -1,26 +1,50 @@
+/* Apple Glassmorphism Theme */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 .App {
 	text-align: center;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
 }
 
 .App-header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 10px 0;
-	background-color: #222;
-	color: #fff;
+	padding: 1rem 0;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(20px) saturate(180%);
+	-webkit-backdrop-filter: blur(20px) saturate(180%);
+	color: white;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .App-tv-logo {
 	height: 45px;
+	filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
 .App-react-logo {
 	display: block;
 	height: 62px;
+	filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
 .App-title {
 	display: block;
 	font-size: 1.5em;
+	font-weight: 600;
+	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	letter-spacing: -0.3px;
 }

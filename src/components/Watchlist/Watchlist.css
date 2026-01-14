@@ -145,7 +145,7 @@
 
 .watchlist-items {
 	flex: 1;
-	overflow-y: auto;
+	/*overflow-y: auto;*/
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
