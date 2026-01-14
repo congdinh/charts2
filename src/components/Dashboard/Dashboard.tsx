@@ -10,6 +10,16 @@ export const Dashboard = () => {
 	const [secondarySymbol, setSecondarySymbol] = useState('BTCUSDT');
 	const [viewMode, setViewMode] = useState<'single' | 'split'>('split');
 
+	// Trigger resize when switching views
+	React.useEffect(() => {
+		const handleResize = () => {
+			window.dispatchEvent(new Event('resize'));
+		};
+		// Small delay to allow DOM to update first
+		const timeoutId = setTimeout(handleResize, 100);
+		return () => clearTimeout(timeoutId);
+	}, [viewMode]);
+
 	return (
 		<div className="dashboard">
 			<header className="dashboard-header">
